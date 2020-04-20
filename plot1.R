@@ -1,5 +1,5 @@
 library(dplyr)
-data <- read.csv("file://C:/rworkspace//exdata_data_household_power_consumption//household_power_consumption.txt",
+data <- read.csv("household_power_consumption.txt",
                   na.strings="?", stringsAsFactors=FALSE, sep=";")
 data$Date <- as.Date(data$Date,"%d/%m/%Y")
 subset <- data %>% filter(between(Date, as.Date("2007-02-01"), as.Date("2007-02-02")))
